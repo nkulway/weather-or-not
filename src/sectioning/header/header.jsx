@@ -9,8 +9,15 @@ export default function Header() {
     <div className="header">
       <h1>Weather or Not</h1>
       <nav>
+        <div>
         <NavLink to="/search">Search</NavLink>
+        </div>
+        <div>
         <NavLink to="/about">About</NavLink>
+        </div>
+        <div>
+        <NavLink to="/activity">Activity</NavLink>
+        </div>
       </nav>
       </div>
     </header>

@@ -74,6 +74,7 @@
 import {Routes, Route} from 'react-router-dom'
 import Searching from '../../routes/search/search'
 // import About from '../../routes/about/about'
+// import Activity from '../../routes/activity/activity';
 import './style.css';
 
 function Main() {
@@ -87,6 +88,7 @@ function Main() {
         <Route path="search" element={<Searching />}>
           <Route path=":id" element={<p>Some ID has been found</p>} />
         </Route>
+        {/* <Route path="activity" element={<Activity />} /> */}
 
         <Route path="*" element={<p>There's nothing here!</p>} />
         </Routes>

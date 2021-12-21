@@ -1,0 +1,15 @@
+* {
+  margin: auto;
+}
+
+.activity {
+  height: 90vh;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.activity-container {
+  align-content: center; 
+  display: flex;
+  flex-direction: column;
+}
