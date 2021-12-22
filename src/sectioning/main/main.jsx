@@ -73,8 +73,8 @@
 // import { connect } from 'react-redux'
 import {Routes, Route} from 'react-router-dom'
 import Searching from '../../routes/search/search'
-// import About from '../../routes/about/about'
-// import Activity from '../../routes/activity/activity';
+import About from '../../routes/about/about'
+import Activity from '../../routes/activity/activity';
 import './style.css';
 
 function Main() {
@@ -84,11 +84,11 @@ function Main() {
         <Routes>
         I am main
         <Route path="/" element={<p>Welcome Home</p>} />
-        {/* <Route path="about" element={<About />} /> */}
+        <Route path="about" element={<About />} />
         <Route path="search" element={<Searching />}>
           <Route path=":id" element={<p>Some ID has been found</p>} />
         </Route>
-        {/* <Route path="activity" element={<Activity />} /> */}
+        <Route path="activity" element={<Activity />} />
 
         <Route path="*" element={<p>There's nothing here!</p>} />
         </Routes>

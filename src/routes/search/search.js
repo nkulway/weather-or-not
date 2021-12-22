@@ -6,26 +6,18 @@ import { InputLabel } from "@mui/material";
 import { FormControl } from '@mui/material';
 import { OutlinedInput } from "@mui/material";
 import { Search } from '@mui/icons-material';
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import './style.css';
 
-
-  
-
-
-
 function Searching({ executeSearch, results }) {
+
+  let navigate = useNavigate()
 
 
   const [values, setValues] = useState({
     location: ""
   });
-  const [ temp, setTemp ] = useState(null)
-
-  const renderTemp = data => {
-    setTemp(data)
-  }
-
 
   const handleChange = (prop) => (e) => {
     setValues({ ...values, [prop]: e.target.value  })
@@ -37,14 +29,9 @@ function Searching({ executeSearch, results }) {
     setValues({
       ...values
     });
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${values.location}&units=imperial&appid=23960c9ac35ca92497bd443010347bf1`)
-    .then(res => res.json())
-    .then(data => renderTemp(data.main.temp))
-    // executeSearch(values.location)
+    executeSearch(values.location)
+    console.log(results)
   };
-
-
- 
 
   return (
     
@@ -59,16 +46,15 @@ function Searching({ executeSearch, results }) {
             endAdornment={<IconButton 
               position="end"
               onClick={handleClick}
-              >{
-              <Search edge="end"/>}
+              onSubmit={results &&( navigate('/about'))}
+              >{<Search edge="end"/>}
               </IconButton>}
             label="location"
           />
         </FormControl>
-        {temp}
+        {results}
         </div>
         </div>
-    
   );
 }
 
@@ -76,6 +62,7 @@ const mapDispatchtoProps = {
   executeSearch
 };
 
+// how to handle undefined 'results'in reducer
 const mapStateToProps = state => ({
   results: state.search.results
 })
