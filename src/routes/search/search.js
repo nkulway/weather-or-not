@@ -1,9 +1,9 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { executeSearch } from "../../redux/actions/actions";
+import { FormControl } from '@mui/material';
 import { IconButton } from "@mui/material";
 import { InputLabel } from "@mui/material";
-import { FormControl } from '@mui/material';
 import { OutlinedInput } from "@mui/material";
 import { Search } from '@mui/icons-material';
 import { useNavigate } from "react-router-dom";
@@ -15,28 +15,28 @@ function Searching({ executeSearch, results }) {
   let navigate = useNavigate()
 
 
+
+
   const [values, setValues] = useState({
     location: ""
   });
 
   const handleChange = (prop) => (e) => {
-    setValues({ ...values, [prop]: e.target.value  })
+    setValues({ ...values, [prop]: e.target.value })
     console.log(values)
   };
 
-  const handleClick = e => {
+  const handleSubmit = e => {
     e.preventDefault()
-    setValues({
-      ...values
-    });
     executeSearch(values.location)
-    console.log(results)
+    navigate('/activity')
   };
 
   return (
     
     <div className="search">
        <div className="search-container">
+         <form onSubmit={handleSubmit}>
      <FormControl fullWidth sx={{ m: 1 }}>
           <InputLabel htmlFor="outlined-adornment-location">Location</InputLabel>
           <OutlinedInput
@@ -45,14 +45,13 @@ function Searching({ executeSearch, results }) {
             onChange={handleChange("location")}
             endAdornment={<IconButton 
               position="end"
-              onClick={handleClick}
-              onSubmit={results &&( navigate('/about'))}
+              type="submit"
               >{<Search edge="end"/>}
               </IconButton>}
             label="location"
           />
         </FormControl>
-        {results}
+        </form>
         </div>
         </div>
   );
