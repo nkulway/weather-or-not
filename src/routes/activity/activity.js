@@ -1,4 +1,5 @@
 import React from 'react'
+import Blue from '../../Blue_Gradient.svg'
 import CardWarm from '../../components/card/cardWarm';
 import { connect } from 'react-redux'
 import './style.css';
@@ -10,7 +11,7 @@ function Activity({ results }) {
     if(results > 40){
       return <CardWarm />
     } else {
-      return <p>Its cold</p>
+      return <p>its cold</p>
     }
   }
 
@@ -18,10 +19,8 @@ function Activity({ results }) {
   return (
      <div className="activity">
        <div className="activity-container">
-        <h2>Activity</h2>
-        <h3>What can you do in this weather?</h3>
         <div>
-          <p>It is {results} degrees farenheight outside at the moment. Why dont you consider doing some of these activities?</p>
+          <h1>{results}°f</h1>
         {handleTemp()} 
         </div>
       </div>

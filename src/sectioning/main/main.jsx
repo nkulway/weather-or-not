@@ -75,12 +75,13 @@ import {Routes, Route} from 'react-router-dom'
 import Searching from '../../routes/search/search'
 import About from '../../routes/about/about'
 import Activity from '../../routes/activity/activity';
+import Blue from '../../Blue_Gradient.svg'
 import './style.css';
 
 function Main() {
 
   return (
-      <main>
+      <div class="main">
         <Routes>
         I am main
         <Route path="/" element={<p>Welcome Home</p>} />
@@ -92,9 +93,7 @@ function Main() {
 
         <Route path="*" element={<p>There's nothing here!</p>} />
         </Routes>
-        {/* if there is a modal message go ahead and render the modal
-        and send the modal down as a prop */}
-      </main>
+      </div>
   );
 }
 

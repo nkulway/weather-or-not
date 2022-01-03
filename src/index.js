@@ -6,6 +6,7 @@ import store from './redux/store'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Blue from './Blue_Gradient.svg'
 
 ReactDOM.render(
   <React.StrictMode>
