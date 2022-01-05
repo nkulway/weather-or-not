@@ -6,7 +6,7 @@ import { FormatQuoteRounded } from '@mui/icons-material';
 
 function Footer() {
   return (
-     <footer class="footer">
+     <footer className="footer">
        <ul>
          <li>
            Home

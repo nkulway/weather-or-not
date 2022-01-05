@@ -8,7 +8,7 @@ function Warm({ activity }) {
 
 		return(
      <div>
-			 <Card elevation={1}>
+			 <Card elevation={2}>
 				 <CardHeader
 				 		action={
 							 <IconButton >

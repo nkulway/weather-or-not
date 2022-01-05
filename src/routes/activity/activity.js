@@ -1,8 +1,10 @@
 import React from 'react'
 import Blue from '../../Blue_Gradient.svg'
-import CardWarm from '../../components/card/cardWarm';
+import CardCold from '../../components/cold/cold';
+import CardWarm from '../../components/warm/cardWarm';
 import { connect } from 'react-redux'
 import './style.css';
+import { CardContent } from '@mui/material';
 
 function Activity({ results }) {
 
@@ -11,7 +13,7 @@ function Activity({ results }) {
     if(results > 40){
       return <CardWarm />
     } else {
-      return <p>its cold</p>
+      return <CardCold />
     }
   }
 

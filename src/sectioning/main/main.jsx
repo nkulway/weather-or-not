@@ -81,7 +81,7 @@ import './style.css';
 function Main() {
 
   return (
-      <div class="main">
+      <div className="main">
         <Routes>
         I am main
         <Route path="/" element={<p>Welcome Home</p>} />
