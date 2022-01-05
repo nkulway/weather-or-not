@@ -75,7 +75,7 @@ import {Routes, Route} from 'react-router-dom'
 import Searching from '../../routes/search/search'
 import About from '../../routes/about/about'
 import Activity from '../../routes/activity/activity';
-import Blue from '../../Blue_Gradient.svg'
+// import Blue from '../../Blue_Gradient.svg'
 import './style.css';
 
 function Main() {

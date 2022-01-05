@@ -1,10 +1,10 @@
 import React from 'react'
-import Blue from '../../Blue_Gradient.svg'
+// import Blue from '../../Blue_Gradient.svg'
 import CardCold from '../../components/cold/cold';
 import CardWarm from '../../components/warm/cardWarm';
 import { connect } from 'react-redux'
 import './style.css';
-import { CardContent } from '@mui/material';
+// import { CardContent } from '@mui/material';
 
 function Activity({ results }) {
 

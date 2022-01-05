@@ -1,7 +1,12 @@
 .footer {
   display: flex;
-  flex-direction: column;
-  height: 50px;
-  /* background-color: black; */
-  margin-top: 50px;
+  justify-content:space-evenly;
+
+  /* flex-direction: column;
+  height: 50px;*/
+  margin-top: 80px;
+}
+
+li {
+  display: inline-block ;
 }
