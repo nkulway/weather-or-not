@@ -1,19 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
+import { DndProvider } from 'react-dnd';
 import { Provider } from 'react-redux';
 import store from './redux/store'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 // import Blue from './Blue_Gradient.svg'
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <DndProvider backend={HTML5Backend} >
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </DndProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

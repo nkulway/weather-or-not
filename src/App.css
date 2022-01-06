@@ -9,3 +9,51 @@
 .y-sticky {
   flex: 1 0 auto;
 }
+
+#warm {
+  background-image: url('./Orange_Gradient.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  animation-name: card;
+  animation-timing-function: linear;
+  animation-duration: 400ms;
+  margin-top: 25px;
+}
+
+#cold {
+  background-image: url('./Blue_Gradient.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@keyframes card {
+  /* start from bottom */
+  0% {
+    opacity: 0;
+    margin-top: 0px;
+  }
+  25% {
+    background-color: rgba(255, 255, 255, 0.3);
+   margin-top: 5px;
+  }
+  /* after 50% of the time alloted has passed change color */
+  50% {
+    background-color: rgba(255, 255, 255, 0.2);
+   margin-top: 10px;
+  }
+  75% {
+    background-color: rgba(255, 255, 255, 0.2);
+   margin-top: 15px;
+  }
+  /* after 100% of time has passed */
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  margin-top: 20px;
+  }
+}
