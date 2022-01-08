@@ -1,20 +1,22 @@
+import { Email, GitHub, LinkedIn } from '@mui/icons-material';
+import { IconButton } from '@mui/material';
 import './style.css';
 
 function Footer() {
   return (
      <footer>
-       <ul className="footer">
-         <li>
-           <a href="/">Home</a>
-         </li>
-         <li>
-           <a href="/search">Search</a>
-         </li>
-         <li>
-           <a href="/about">About</a>
-         </li>
-       </ul>
-       </footer>
+       <div className="footer">
+        <IconButton href="https://github.com/nkulway">
+          <GitHub />
+        </IconButton>
+        <IconButton href="https://www.linkedin.com/in/nick-kulway-4a0888a4/">
+          <LinkedIn />
+        </IconButton>
+        <IconButton>
+          <Email href="nkulway@gmail.com"/>
+        </IconButton>  
+       </div>
+     </footer>
   );
 }
 

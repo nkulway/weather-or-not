@@ -1,12 +1,5 @@
 .footer {
   display: flex;
-  justify-content:space-evenly;
-
-  /* flex-direction: column;
-  height: 50px;*/
-  /* margin-top: 80vh; */
-}
-
-li {
-  display: inline-block ;
-}
+  justify-content: center;
+  position: relative;
+  }
