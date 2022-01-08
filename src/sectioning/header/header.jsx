@@ -3,11 +3,11 @@ import HeaderLogo from '../../Header.svg'
 import './style.css';
 
 
-export default function Header() {
+function Header() {
   return (
     <header>
       <div>
-      <img src={HeaderLogo} alt="Header Img" />
+        <img src={HeaderLogo} alt="Header Img" />
       </div>
     </header>
   );
@@ -15,4 +15,4 @@ export default function Header() {
 
 
 
-// export default Header;
+export default Header;

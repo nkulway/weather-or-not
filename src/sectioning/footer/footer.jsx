@@ -1,26 +1,20 @@
 import './style.css';
-import { NavLink } from 'react-router-dom';
-// import Blue from '../../Blue_Gradient.svg'
-// import { FormatQuoteRounded } from '@mui/icons-material';
-
 
 function Footer() {
   return (
      <footer>
        <ul className="footer">
          <li>
-           <NavLink to="/">Home</NavLink>
+           <a href="/">Home</a>
          </li>
          <li>
-         <NavLink to="/search">Search</NavLink>
+           <a href="/search">Search</a>
          </li>
          <li>
-         <NavLink to="/about">About</NavLink>
+           <a href="/about">About</a>
          </li>
        </ul>
-  
-       {/* <img src={Blue} /> */}
-     </footer>
+       </footer>
   );
 }
 

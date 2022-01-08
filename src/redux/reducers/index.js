@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-// import modal from './modalReducer'
+import reset from './resetReducer'
 import search from './searchReducer'
 
-export default combineReducers({ search })
+export default combineReducers({ reset, search })

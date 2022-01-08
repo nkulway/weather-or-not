@@ -1,4 +1,3 @@
-import * as React from "react";
 import { connect } from "react-redux";
 import { executeSearch } from "../../redux/actions/actions";
 import { FormControl } from '@mui/material';
@@ -10,15 +9,13 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import './style.css';
 
-function Searching({ executeSearch, results }) {
+function Searching({ executeSearch, results, reset }) {
 
   let navigate = useNavigate()
 
-
-
-
   const [values, setValues] = useState({
-    location: ""
+    location: "",
+    reset
   });
 
   const handleChange = (prop) => (e) => {
@@ -63,7 +60,8 @@ const mapDispatchtoProps = {
 
 // how to handle undefined 'results'in reducer
 const mapStateToProps = state => ({
-  results: state.search.results
+  results: state.search.results,
+  reset: state.reset
 })
 
 export default connect(mapStateToProps, mapDispatchtoProps)(Searching);
