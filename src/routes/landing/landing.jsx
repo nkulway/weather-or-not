@@ -1,6 +1,8 @@
-import { FilterDrama } from '@mui/icons-material';
+// import { FilterDrama } from '@mui/icons-material';
+// import { FilterDramaTwoTone } from '@mui/icons-material';
 import LandingInfo from '../../Landing_Info.svg'
 import Search from '../search/search'
+import Weather from '../../final_weather.svg'
 import './style.css';
 
 function Landing() {
@@ -11,7 +13,8 @@ function Landing() {
         <Search />
       </div>
       <div className="landing-image">
-        <FilterDrama fontSize="large" />
+        <img src={Weather} alt="weather_img" />
+        
       </div>
      </div>
   );

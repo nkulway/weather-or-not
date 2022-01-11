@@ -2,7 +2,7 @@ const warmActivities = [
   {
     "activity": "Go for a Run",
     "details": "Challenge yourself and go for a run!  Did you know running not only burns 50% more calories than walking but it helps build stronger bones & promotes better mood and energy?  Any distance at any speed - you can do it!",
-    "category": "Ideal Temp: 44°f - 59°f",
+    "category": "Ideal Temp: 50°f - 59°f",
     "id": 1
   },
   {

@@ -12,8 +12,8 @@ function Footer() {
         <IconButton href="https://www.linkedin.com/in/nick-kulway-4a0888a4/">
           <LinkedIn />
         </IconButton>
-        <IconButton>
-          <Email href="nkulway@gmail.com"/>
+        <IconButton href="http://kulway.surge.sh/">
+          <Email />
         </IconButton>  
        </div>
      </footer>
